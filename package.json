@@ -3,6 +3,7 @@
   "devDependencies": {
     "@layerzerolabs/lz-evm-oapp-v2": "^3.0.66",
     "@layerzerolabs/lz-evm-protocol-v2": "^3.0.66",
+    "@layerzerolabs/lz-v2-utilities": "^3.0.66",
     "@nomicfoundation/hardhat-chai-matchers": "^2.0.8",
     "@nomicfoundation/hardhat-ethers": "^3.0.8",
     "@nomicfoundation/hardhat-network-helpers": "^1.0.12",
