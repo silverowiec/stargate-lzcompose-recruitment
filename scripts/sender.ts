@@ -90,29 +90,14 @@ async function main() {
         composeMsg
     );
 
-    const sendParamStruct: PrepareTakeTaxiParams = {
-        dstEid: sendParam.dstEid,
-        to: sendParam.to,
-        amountLD: sendParam.amountLD,
-        minAmountLD: sendParam.minAmountLD,
-        extraOptions: sendParam.extraOptions,
-        composeMsg: sendParam.composeMsg,
-        oftCmd: sendParam.oftCmd,
-    };
-
-    const messagingFeeStruct: MessagingFee = {
-        nativeFee: messagingFee.nativeFee,
-        lzTokenFee: messagingFee.lzTokenFee,
-    };
-
     const stargate: IStargate = IStargate__factory.connect(
         stargateArbitrumSepolia, //
         signer
     );
 
     const tx = await stargate.sendToken(
-        sendParamStruct,
-        messagingFeeStruct,
+        sendParam,
+        messagingFee,
         await signer.getAddress(),
         {value: valueToSend}
     );
